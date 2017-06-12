@@ -19,7 +19,6 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="请输入用户名"
         app:counterEnabled="true"
         app:counterMaxLength="5"
         app:counterOverflowTextAppearance="@style/OverTextAppearance"
@@ -29,11 +28,15 @@
         app:hintTextAppearance="@style/EditText_hintTextAppearance"
         app:theme="@style/EditText_Theme">
 
+        <!--EditText 设置左侧图片,系统建议drawableStart/drawableLeft一起用,API>17-->
         <android.support.design.widget.TextInputEditText
-            android:inputType="text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:imeOptions="actionNext"/>
+            android:drawableLeft="@mipmap/edit_account"
+            android:drawableStart="@mipmap/edit_account"
+            android:hint="请输入用户名"
+            android:imeOptions="actionNext"
+            android:inputType="text"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -60,12 +63,15 @@
         app:passwordToggleTintMode="multiply"
         app:theme="@style/EditText_Theme">
 
-        <android.support.design.widget.TextInputEditText
+        <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/edit_lock"
+            android:drawableStart="@mipmap/edit_lock"
             android:imeOptions="actionNext"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:paddingLeft="100dp"/>
 
     </android.support.design.widget.TextInputLayout>
 
@@ -86,9 +92,44 @@
             android:id="@+id/editText_customize"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/edit_lock"
+            android:drawableStart="@mipmap/edit_lock"
             android:imeOptions="actionDone"
             android:inputType="textPassword"/>
 
+
+    </android.support.design.widget.TextInputLayout>
+
+    <!--Test EditText.setCompoundDrawables()-->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/til_testEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleDrawable="@drawable/password_visible_invisible"
+        >
+
+        <EditText
+            android:id="@+id/editText_drawable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/edit_lock"
+            android:drawableStart="@mipmap/edit_lock"
+            android:hint="Test EditText.setCompoundDrawables()"
+            android:inputType="numberPassword"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <!--Test EditText.setCompoundDrawablesWithIntrinsicBounds()-->
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleDrawable="@drawable/password_visible_invisible">
+
+        <EditText
+            android:id="@+id/editText_drawable2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Test EditText.setCompoundDrawablesWithIntrinsicBounds()"
+            android:inputType="numberPassword"/>
     </android.support.design.widget.TextInputLayout>
 
 

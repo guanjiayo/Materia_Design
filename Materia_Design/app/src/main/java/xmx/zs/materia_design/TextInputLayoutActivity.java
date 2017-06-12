@@ -1,11 +1,13 @@
 package xmx.zs.materia_design;
 
+import android.graphics.drawable.Drawable;
+import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.widget.EditText;
 /*
  * @创建者     mqm
  * @博客       http://blog.csdn.net/u012792686
@@ -24,7 +26,7 @@ public class TextInputLayoutActivity extends AppCompatActivity {
 
     private TextInputEditText mEditText_customize;
     private TextInputLayout   mTil_customize;
-    private TextInputEditText mEditText;
+    private EditText          mEditText;
     private TextInputLayout   mTextInputLayout;
 
     @Override
@@ -36,12 +38,45 @@ public class TextInputLayoutActivity extends AppCompatActivity {
         mEditText_customize = (TextInputEditText) findViewById(R.id.editText_customize);
         mTil_customize = (TextInputLayout) findViewById(R.id.til_customize);
         //系统自带的密码开关输入框
-        mEditText = (TextInputEditText) findViewById(R.id.editText);
+        mEditText = (EditText) findViewById(R.id.editText);
         mTextInputLayout = (TextInputLayout) findViewById(R.id.til);
-
+        testSetCompoundDrawables();
+        testSetCompoundDrawablesWithIntrinsicBounds();
         customizeEditText();
         TextInputLyout_EditText();
 
+    }
+
+    /**
+     * 测试EditText.setCompoundDrawablesWithIntrinsicBounds()
+     * <p>
+     * 可以在上、下、左、右设置图标，如果不想在某个地方显示，则设置为null。
+     * <p>
+     * 图标的宽高将会设置为固有宽高，既自动通过getIntrinsicWidth和getIntrinsicHeight获取。
+     * <p>
+     * 即:这种方式只能显示原图
+     */
+    private void testSetCompoundDrawablesWithIntrinsicBounds() {
+        Drawable drawable = getResources().getDrawable(R.mipmap.edit_lock);
+        EditText editText_drawable = (EditText) findViewById(R.id.editText_drawable2);
+        editText_drawable.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null);
+
+    }
+
+    /**
+     * 测试EditText.setCompoundDrawables()
+     * <p>
+     * 可以在上、下、左、右设置图标，如果不想在某个地方显示，则设置为null。
+     * <p>
+     * 但是Drawable必须要setBounds(Rect)。设置初始位置、宽和高等信息。
+     * <p>
+     * 即:使用前要先调用Drawable.setBounds(),可以调整图片的大小和相对位置
+     */
+    private void testSetCompoundDrawables() {
+        Drawable drawable = getResources().getDrawable(R.mipmap.edit_lock);
+        drawable.setBounds(0, 0, 40, 40);
+        EditText editText_drawable = (EditText) findViewById(R.id.editText_drawable);
+        editText_drawable.setCompoundDrawables(drawable, null, null, null);
     }
 
     /**
