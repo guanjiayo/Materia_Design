@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="xmx.zs.materia_design.TextInputLayoutActivity">
+    tools:context="xmx.zs.materia_design.view.activity.TextInputLayoutActivity">
 
     <!--android.support.design:hintAnimationEnabled | 是否显示hint的动画,默认true-->
     <!--android.support.design:hintEnabled | 是否使用hint属性,默认true-->

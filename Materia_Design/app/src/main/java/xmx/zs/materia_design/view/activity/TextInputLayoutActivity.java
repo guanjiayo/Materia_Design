@@ -1,13 +1,15 @@
-package xmx.zs.materia_design;
+package xmx.zs.materia_design.view.activity;
 
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
+
+import xmx.zs.materia_design.R;
+import xmx.zs.materia_design.base.BaseActivity;
 /*
  * @创建者     mqm
  * @博客       http://blog.csdn.net/u012792686
@@ -22,7 +24,7 @@ import android.widget.EditText;
  *
  */
 
-public class TextInputLayoutActivity extends AppCompatActivity {
+public class TextInputLayoutActivity extends BaseActivity {
 
     private TextInputEditText mEditText_customize;
     private TextInputLayout   mTil_customize;
@@ -30,10 +32,12 @@ public class TextInputLayoutActivity extends AppCompatActivity {
     private TextInputLayout   mTextInputLayout;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_text_input_layout);
+    protected int setContentViewId() {
+        return R.layout.activity_text_input_layout;
+    }
 
+    @Override
+    protected void initView() {
         //自定义密码开关输入框
         mEditText_customize = (TextInputEditText) findViewById(R.id.editText_customize);
         mTil_customize = (TextInputLayout) findViewById(R.id.til_customize);
@@ -44,8 +48,18 @@ public class TextInputLayoutActivity extends AppCompatActivity {
         testSetCompoundDrawablesWithIntrinsicBounds();
         customizeEditText();
         TextInputLyout_EditText();
+    }
+
+    @Override
+    protected void initData() {
 
     }
+
+    @Override
+    public void onClick(View v) {
+
+    }
+
 
     /**
      * 测试EditText.setCompoundDrawablesWithIntrinsicBounds()

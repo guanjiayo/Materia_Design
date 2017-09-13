@@ -8,6 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Expand_AppTheme" parent="AppTheme">
+        <item name="android:clipToPadding">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
     <style name="EditText_Theme" parent="AppTheme">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#0FA</item>

@@ -6,19 +6,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="xmx.zs.materia_design.MainActivity">
+    tools:context="xmx.zs.materia_design.view.activity.MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="TextInputLayout"
-            android:text="TextInputLayout 与 TextInputEditText"
-            />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <Button
+                android:id="@+id/btn_textinput_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextInputLayout 与 TextInputEditText"
+                />
+
+            <Button
+                android:id="@+id/btn_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CardView"/>
+        </LinearLayout>
     </ScrollView>
 
 
