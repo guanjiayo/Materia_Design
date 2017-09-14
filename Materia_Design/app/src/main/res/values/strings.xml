@@ -1,14 +1,31 @@
 <resources>
     <string name="app_name">Materia_Design</string>
-    <string name="cardview_contents">This is a CardView widget. CardView widgets can have
-        shadows and rounded corners.
-        \n\nTo create a card with a shadow, use the <font fgcolor="#FFFFFFFF">android:elevation</font>
-        attribute.
-        \n\nTo set the corner radius in your layouts, use the <font
-            fgcolor="#FFFFFFFF">card_view:cardCornerRadius</font> attribute.
+    <string name="cardview_contents">
+        要创建带有阴影的CardView,使用<font fgcolor="#FFFFFFFF">card_view:elevation</font>属性.
+        \n\n要在布局中设置拐角半径,使用<font fgcolor="#FFFFFFFF">card_view:cardCornerRadius</font> 属性。
     </string>
-    <string name="cardview_radius_seekbar_text">Radius</string>
-    <string name="cardview_elevation_seekbar_text">Elevation</string>
+
+    <string name="cardview_contents_def">
+            card_view:cardBackgroundColor="@color/colorPurple"
+            \n\n card_view:cardCornerRadius="30dp"
+            \n\n card_view:cardElevation="10dp"
+            \n\n card_view:cardMaxElevation="5dp"
+            \n\n card_view:cardPreventCornerOverlap="true"
+            \n\n card_view:cardUseCompatPadding="true"
+            \n\n card_view:contentPadding="5dp"
+            \n\n card_view:contentPaddingBottom="5dp"
+            \n\n card_view:contentPaddingLeft="5dp"
+            \n\n card_view:contentPaddingRight="5dp"
+            \n\n card_view:contentPaddingTop="5dp"
+    </string>
+
+    <string name="radius_seekbar_text">Radius</string>
+    <string name="elevation_seekbar_text">Elevation</string>
+    <string name="maxElevation_seekbar_text">MaxElevation</string>
 
     <string name="MainFragment">MainFragment</string>
+    <string name="xml_use">XML静态使用</string>
+    <string name="code_use">代码动态使用</string>
+    <string name="cardprevent_cb">cardPreventCornerOverlap</string>
+    <string name="cardpadding_cb">cardUseCompatPadding</string>
 </resources>

@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorRed">#f70101</color>
-
-    <color name="cardview_initial_background">#71C3DE</color>
+    <color name="colorBlack">#0a0a0a</color>
+    <color name="colorGrey">#b0a8a8</color>
+    <color name="colorAirBlue">#71C3DE</color>
+    <color name="colorPurple">#b06fe2</color>
 </resources>

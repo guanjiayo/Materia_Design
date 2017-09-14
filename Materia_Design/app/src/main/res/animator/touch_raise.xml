@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Lollipop 新特性 android:stateListAnimator 属性实现 Z轴动画效果-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="true"
+        android:state_pressed="true">
+        <objectAnimator
+            android:duration="@android:integer/config_shortAnimTime"
+            android:propertyName="translationZ"
+            android:valueTo="20dp"
+            android:valueType="floatType"/>
+    </item>
+
+    <item>
+        <objectAnimator
+            android:duration="@android:integer/config_shortAnimTime"
+            android:propertyName="translationZ"
+            android:valueTo="0dp"
+            android:valueType="floatType"/>
+    </item>
+</selector>

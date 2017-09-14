@@ -7,6 +7,21 @@
         \n\nTo set the corner radius in your layouts, use the <font
             fgcolor="#FFFFFFFF">card_view:cardCornerRadius</font> attribute.
     </string>
+    <string name="cardview_contents_def">
+            card_view:cardBackgroundColor="@color/colorPurple"
+            \n\n card_view:cardCornerRadius="30dp"
+            \n\n card_view:cardElevation="10dp"
+            \n\n card_view:cardMaxElevation="5dp"
+            \n\n card_view:cardPreventCornerOverlap="true"
+            \n\n card_view:cardUseCompatPadding="true"
+            \n\n card_view:contentPadding="@dimen/content_padding"
+            \n\n card_view:contentPaddingBottom="@dimen/content_padding"
+            \n\n card_view:contentPaddingLeft="@dimen/content_padding"
+            \n\n card_view:contentPaddingRight="@dimen/content_padding"
+            \n\n card_view:contentPaddingTop="@dimen/content_padding"
+    </string>
     <string name="cardview_radius_seekbar_text">Radius</string>
     <string name="cardview_elevation_seekbar_text">Elevation</string>
+    <string name="cardprevent_cb">cardPreventCornerOverlap</string>
+    <string name="cardpadding_cb">cardUseCompatPadding</string>
 </resources>
