@@ -1,6 +1,7 @@
 package xmx.zs.materia_design.view.activity;
 
 import android.view.View;
+import android.widget.Button;
 
 import xmx.zs.materia_design.R;
 import xmx.zs.materia_design.base.BaseActivity;
@@ -20,6 +21,11 @@ import xmx.zs.materia_design.base.BaseActivity;
  *
  */
 public class MainActivity extends BaseActivity { //TODO 这里改成HomeActivity
+    Button mBtnTextinputLayout;
+    Button mBtnCardview;
+    Button mBtnFABActivity;
+    Button mBtnFlatActivity;
+    Button mBtnRaisedActivity;
 
 
     @Override
@@ -28,28 +34,46 @@ public class MainActivity extends BaseActivity { //TODO 这里改成HomeActivity
     }
 
     @Override
+    protected void initView() {
+        mBtnTextinputLayout = (Button) findViewById(R.id.btn_textinput_layout);
+        mBtnCardview = (Button) findViewById(R.id.btn_cardview);
+        mBtnFABActivity = (Button) findViewById(R.id.btn_FABActivity);
+        mBtnFlatActivity = (Button) findViewById(R.id.btn_FlatActivity);
+        mBtnRaisedActivity = (Button) findViewById(R.id.btn_RaisedActivity);
+    }
+
+    @Override
+    protected void initEvent() {
+        mBtnTextinputLayout.setOnClickListener(this);
+        mBtnCardview.setOnClickListener(this);
+        mBtnFABActivity.setOnClickListener(this);
+        mBtnFlatActivity.setOnClickListener(this);
+        mBtnRaisedActivity.setOnClickListener(this);
+    }
+
+    @Override
     protected void initData() {
 
     }
 
-    @Override
-    protected void initView() {
-        findViewById(R.id.btn_cardview).setOnClickListener(this);
-        findViewById(R.id.btn_textinput_layout).setOnClickListener(this);
-    }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btn_cardview:
-                startActivity(CardViewActivity.class);
-                break;
-
+    public void onClick(View view) {
+        switch (view.getId()) {
             case R.id.btn_textinput_layout:
                 startActivity(TextInputLayoutActivity.class);
                 break;
+            case R.id.btn_cardview:
+                startActivity(CardViewActivity.class);
+                break;
+            case R.id.btn_FABActivity:
+                startActivity(FloatingActionButtonActivity.class);
+                break;
+            case R.id.btn_FlatActivity:
+                startActivity(FlatButtonActivity.class);
+                break;
+            case R.id.btn_RaisedActivity:
+                startActivity(RaisedButtonActivity.class);
+                break;
         }
     }
-
-
 }

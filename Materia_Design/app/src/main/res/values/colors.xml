@@ -8,4 +8,9 @@
     <color name="colorGrey">#b0a8a8</color>
     <color name="colorAirBlue">#71C3DE</color>
     <color name="colorPurple">#b06fe2</color>
+    <color name="colorIndigo">#2dc18d</color>
+    <color name="colorBlue">#3661ce</color>
+    <color name="colorPink">#fa6eb9</color>
+    <color name="colorYellow">#faee6e</color>
+    <color name="colorWhite">#fafafa</color>
 </resources>

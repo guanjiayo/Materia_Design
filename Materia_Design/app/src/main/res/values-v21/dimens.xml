@@ -14,7 +14,7 @@
  See the License for the specific language governing permissions and
  limitations under the License.
 -->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="margin_tiny">4dp</dimen>
     <dimen name="margin_small">8dp</dimen>
@@ -23,5 +23,10 @@
     <dimen name="margin_huge">64dp</dimen>
 
     <dimen name="content_padding">5dp</dimen>
+
+    <dimen name="design_fab_size_normal" tools:override="true">100dp</dimen>
+    <dimen name="design_fab_image_size" tools:override="true">20dp</dimen>
+
+    <dimen name="floatingactionbutton_pressedtranslationz" tools:override="true">5dp</dimen>
 
 </resources>

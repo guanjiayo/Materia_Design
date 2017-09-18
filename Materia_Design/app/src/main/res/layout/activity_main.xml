@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,6 +28,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CardView"/>
+            <Button
+                android:id="@+id/btn_FABActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Floating Action Button"/>
+            <Button
+                android:id="@+id/btn_FlatActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Flat Button"/>
+            <Button
+                android:id="@+id/btn_RaisedActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Raised Button"/>
         </LinearLayout>
     </ScrollView>
 

@@ -19,6 +19,24 @@
             \n\n card_view:contentPaddingTop="5dp"
     </string>
 
+    <string name="fab_xml_text">
+              android:id="@+id/fab"
+              \n\n android:layout_width="wrap_content"
+              \n\n android:layout_height="wrap_content"
+              \n\n android:layout_gravity="center|bottom"
+              \n\n android:layout_margin="10dp"
+              \n\n android:clickable="true"
+              \n\n android:src="@android:drawable/ic_input_add"
+              \n\n android:theme="@style/MyFABButton"
+              \n\n app:backgroundTint="@color/colorYellow"
+              \n\n app:backgroundTintMode="src_atop"
+              \n\n app:borderWidth="5dp"
+              \n\n app:elevation="10dp"
+              \n\n app:fabSize="normal"
+              \n\n app:pressedTranslationZ="20dp"
+              \n\n app:rippleColor="@color/colorBlue"
+    </string>
+
     <string name="radius_seekbar_text">Radius</string>
     <string name="elevation_seekbar_text">Elevation</string>
     <string name="maxElevation_seekbar_text">MaxElevation</string>
@@ -28,4 +46,6 @@
     <string name="code_use">代码动态使用</string>
     <string name="cardprevent_cb">cardPreventCornerOverlap</string>
     <string name="cardpadding_cb">cardUseCompatPadding</string>
+    <string name="useCompatPadding">UseCompatPadding</string>
+    <string name="hide_fab">隐藏FAB</string>
 </resources>

@@ -21,6 +21,12 @@
         </activity>
         <activity android:name=".view.activity.CardViewActivity">
         </activity>
+        <activity android:name=".view.activity.FloatingActionButtonActivity">
+        </activity>
+        <activity android:name=".view.activity.FlatButtonActivity">
+        </activity>
+        <activity android:name=".view.activity.RaisedButtonActivity">
+        </activity>
     </application>
 
 </manifest>

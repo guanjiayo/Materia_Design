@@ -20,28 +20,45 @@
         <item name="colorAccent">#F50</item>
     </style>
 
-    <style name="EditText_hintTextAppearance" >
+    <style name="EditText_hintTextAppearance">
         <!-- Customize your theme here. -->
-       <item name="android:textSize">18sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">#0FA</item>
     </style>
 
-    <style name="OverTextAppearance" >
+    <style name="OverTextAppearance">
         <!-- Customize your theme here. -->
         <item name="android:textSize">13sp</item>
         <item name="android:textColor">#F00</item>
     </style>
 
-    <style name="ErrorTextAppearance" >
+    <style name="ErrorTextAppearance">
         <!-- Customize your theme here. -->
         <item name="android:textSize">13sp</item>
         <item name="android:textColor">#35e90d</item>
     </style>
 
-    <style name="CountTextAppearance" >
+    <style name="CountTextAppearance">
         <!-- Customize your theme here. -->
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">#A0A</item>
+    </style>
+
+    <!--兼容性:colorControlHighlight 切换Button按下状态的颜色 仅影响Lollipop-->
+    <style name="MyRaiseButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorIndigo</item>
+        <item name="colorButtonNormal">@color/colorPink</item>
+    </style>
+
+    <style name="MyFlatButton" parent="Theme.AppCompat.Light">
+        <item name="colorControlHighlight">@color/colorPink</item>
+
+    </style>
+
+    <!--colorAccent 影响Floating Action Button 样式-->
+    <style name="MyFABButton" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorPink</item>
+
     </style>
 
 

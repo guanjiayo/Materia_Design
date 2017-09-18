@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/xml_use"
+            android:textSize="18sp"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/colorAirBlue"
+            app:cardCornerRadius="5dp"
+            app:contentPadding="5dp">
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/fab_xml_text"/>-->
+
+        </android.support.v7.widget.CardView>
+        <!--app:backgroundTint="@color/colorYellow" 设置FAB默认的背景颜色,默认跟随主题的colorAccent属性(优先级>默认主题)-->
+        <!--app:backgroundTintMode="src_atop" src_atop,src_in,src_over,multipy和screen 四种Mode -->
+        <!--app:borderWidth="5dp" 设置FAB的边框宽度-->
+        <!--app:elevation="10dp" 设置FAB未按下的阴影-->
+        <!--app:fabSize="normal" 设置FAB的大小,有auto,norma和mini三种-->
+        <!--app:pressedTranslationZ="10dp" 设置FAB按下时的阴影,建议数值大于elevation-->
+        <!--app:rippleColor="@color/colorBlue" 设置FAB按下时的背景色-->
+        <!--app:useCompatPadding="true" 设置FAB的内边距(不建议使用)-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_xml"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:src="@android:drawable/ic_input_add"
+            android:theme="@style/MyFABButton"
+            app:backgroundTint="@color/colorYellow"
+            app:backgroundTintMode="src_atop"
+            app:borderWidth="5dp"
+            app:elevation="10dp"
+            app:fabSize="normal"
+            app:pressedTranslationZ="20dp"
+            app:rippleColor="@color/colorBlue"
+            app:useCompatPadding="true"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/colorBlack"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/code_use"
+            android:textSize="18sp"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:src="@android:drawable/ic_input_add"
+            android:theme="@style/MyFABButton"
+            />
+
+
+        <include
+            android:id="@+id/seekbar_elevation"
+            layout="@layout/seekbar_fab"/>
+
+
+        <Switch
+            android:id="@+id/sw_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/hide_fab"/>
+
+        <CheckBox
+            android:id="@+id/cb_UseCompatPadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/useCompatPadding"/>
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
